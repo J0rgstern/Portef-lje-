@@ -1,0 +1,168 @@
+body {
+    padding: 0;
+    margin:0;
+    background-color: black;
+}
+    .grid-container {
+        display: grid;
+        grid-template-columns: 2fr 4fr;
+        grid-template-rows: 6rem 2fr 2fr 1fr;
+        grid-template-areas:
+        "header header"
+        "side main" 
+        "side main"
+        "footer footer";
+    }    
+
+    .grid-container .main-header {
+        grid-area: header;
+        grid-template-columns: minmax(600px);
+        background-color: red;
+
+    }
+
+    .grid-container .main {
+        
+        grid-area: main;
+        background-color: black;
+
+    }
+
+    .grid-container .side {
+        grid-area: side;
+        background-color:black;
+
+
+    }
+
+    .grid-container .foot {
+        grid-area: footer;
+        background-color:black;
+
+    }
+
+.header{
+    display: flex;
+    position: fixed;
+    background-color: black;
+    width: 100%;
+    height:6rem;
+    top: 0;
+    z-index: 3;
+}
+
+#list1 li{
+    display: flex;  
+    justify-items: center;
+
+}
+
+.logo {
+    margin-bottom: 0px;
+    width:150px;
+    align-self: center;
+    margin-right: auto;
+}
+
+#home {
+    display: contents;
+}
+
+
+#list1 {
+    display: flex;
+    width: 85%;
+    margin:auto;
+    list-style-type: none;
+    padding:0;
+    z-index: 2;
+}
+
+.link {
+    display: flex;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    margin-left:30px;
+    align-self: center; 
+    transition: all 0.5s ease-in-out;
+}
+
+.link:hover {
+    color:orange
+    
+}
+
+
+#interact {
+    border: 1px solid orange;
+    position: fixed;
+    width: 150px;
+    transition: width 0.5s ease-in-out;
+    margin: auto;
+    top:75px;
+    z-index: 3;
+}
+
+.header:hover ul > #interact {
+    width: 85%;
+}
+/* ------------------------------------------------------------Navigasjonsbar-------------------------------------------------------- */
+
+
+/* ---------------------------------------------------------------Homepage----------------------------------------------------------- */
+
+
+.jorgen-bilde-tekst {
+    display: flex;
+    flex-direction: row;
+
+}
+
+h1 {
+    display: flex;
+    cursor: default;
+    font-size: 4em;
+    font-weight: 100em;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    color: white;
+    /* padding-left: 75px; */
+    align-self: center;
+    transition:transform 0.5s ease-in-out;
+    transform-origin: left center;
+    z-index: 1;
+    max-width: 300px;
+}
+
+.homepage:hover > h1{
+    align-self: center;
+    transform: scale(1.3);
+    transform-origin: initial center;
+    color: orange;
+    z-index: 1;
+}
+
+#pers {
+    display: flex;
+    margin-left: auto;
+    z-index: 2;
+}
+
+
+.dividers {
+    width: 85%;
+    border-color: orange;
+    align-self: center;
+    margin:auto;
+}
+
+p {
+    font-size: 1em;
+    font-weight: 5em;
+    max-width: 90%;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    color: white;
+    padding-left: 75px;
+}
